@@ -16,7 +16,7 @@ DATABASE_PASSWORD = (set this to your database password)
 DATABASE_NAME = (set this to your database name)
 ```
 
-4. Copy and paste the SQL script from the file titled SQL script in the repository and run it in MySQL Workbench.
+4. Copy and paste the SQL script from the file titled "SQL script" in the repository and run it in MySQL Workbench.
 
 5. run ``` npm start ```
 
