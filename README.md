@@ -8,9 +8,9 @@
 
 Replace your-username and repo-name with your actual GitHub username and repository name.
 
-2. Run ```bash npm install bash```
+2. Run ```npm install ```
 
-3. Create a .env file that includes the following
+4. Create a .env file that includes the following
 ```DATABASE_HOST = 127.0.0.1
   DATABASE_USER = root
   DATABASE_PASSWORD = (set this to your database password)
