@@ -12,12 +12,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/submit', function(req, res) {
-    console.log(req.body['ingredients[]']);
+    //console.log(req.body['ingredients[]']);
     const { recipe_name, recipe_image, recipe_description, recipe_steps, protein_type } = req.body;
     //console.log(ingredients);
     const selectedIngredients = req.body['ingredients[]'] || [];
 
-    console.log(selectedIngredients);
+    //console.log(selectedIngredients);
 
     const addRecipe = 'INSERT INTO recipes (recipe_name, recipe_image, recipe_description, protein_type) VALUES (?, ?, ?, ?)';
     
@@ -30,7 +30,7 @@ router.post('/submit', function(req, res) {
         const recipeId = result.insertId; 
 
         const stepsArray = recipe_steps.split("\n").map((step, index) => [recipeId, index+1, step.trim()]);
-        console.log(stepsArray);
+        //console.log(stepsArray);
         const recipeSteps = 'INSERT INTO recipe_steps (recipe_id, step_number, step_description) VALUES ?';
         
         connection.query(recipeSteps, [stepsArray], (err) => {
@@ -39,7 +39,7 @@ router.post('/submit', function(req, res) {
 
         //const addedIngredientIds = 'SELECT ingredient_id FROM ingredients WHERE ingredient_id IN (?)';
         const recipeIds = selectedIngredients.map(ingredientId => [recipeId, parseInt(ingredientId, 10)]);
-        console.log(recipeIds);
+        //console.log(recipeIds);
 
         if(recipeIds.length > 0) {                
             const recipeIngredientsInsert = 'INSERT INTO recipe_ingredients (recipe_id, ingredient_id) VALUES ?';

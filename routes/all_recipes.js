@@ -16,8 +16,8 @@ router.get('/', async function(req, res, next) {
 
   try {
       let categorizedRecipes = await Promise.all(queries);
-      console.log(categorizedRecipes)
-      console.log(categorizedRecipes[0].recipes);
+      //console.log(categorizedRecipes)
+      //console.log(categorizedRecipes[0].recipes);
       res.render('all_recipes', { title: "All Recipes", categorizedRecipes });
   } catch (error) {
       next(error);

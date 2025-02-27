@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   let sql = 'SELECT * FROM recipes';
   connection.query(sql, (err, result) => {
     if (err) throw err;
-    console.log(result);
+    //console.log(result);
     //res.render('recipes', { recipes: result });
   });
 });
@@ -34,9 +34,9 @@ router.get('/:id', function(req, res, next) {
             connection.query(recipeIngredients, [recipeId], (err, ingredientsResult) => {
               let recipe = result[0]; 
 
-              console.log(recipe);
-              console.log(stepsResult);
-              console.log(ingredientsResult);
+              //console.log(recipe);
+              //console.log(stepsResult);
+              //console.log(ingredientsResult);
               res.render('recipes', { recipe: recipe, steps: stepsResult, ingredients: ingredientsResult });
             });
         });
