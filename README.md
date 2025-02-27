@@ -11,14 +11,16 @@ Replace your-username and repo-name with your actual GitHub username and reposit
 2. Run ```npm install ```
 
 4. Create a .env file that includes the following
-```DATABASE_HOST = 127.0.0.1
-  DATABASE_USER = root
-  DATABASE_PASSWORD = (set this to your database password)
-  DATABASE_NAME = (set this to your database name)```
+```
+DATABASE_HOST = 127.0.0.1
+DATABASE_USER = root
+DATABASE_PASSWORD = (set this to your database password)
+DATABASE_NAME = (set this to your database name)
+```
 
 4. Download the SQL script from Google Classroom in MySQL Workbench
 
-5. run ```npm start```
+5. run ``` npm start ```
 
 
 
