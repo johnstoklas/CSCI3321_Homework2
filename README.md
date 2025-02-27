@@ -3,11 +3,11 @@
 1. Clone this repository to your local machine using the following command:
 
  ```bash
- git clone https://github.com/your-username/repo-name.git```
+ git clone https://github.com/your-username/repo-name.git bash```
 
 Replace your-username and repo-name with your actual GitHub username and repository name.
 
-2. Run ```npm install```
+2. Run ```bash npm install bash```
 
 3. Create a .env file that includes the following
 ```DATABASE_HOST = 127.0.0.1
