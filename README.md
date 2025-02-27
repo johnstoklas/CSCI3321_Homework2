@@ -3,7 +3,7 @@
 1. Clone this repository to your local machine using the following command:
 
  ```
- git clone https://github.com/johnstoklas/CSCI_Homework2.git
+ git clone https://github.com/johnstoklas/CSCI3321_Homework2.git
 ```
 
 2. Run ```npm install ```
