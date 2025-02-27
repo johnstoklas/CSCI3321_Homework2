@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> <%= recipe.recipe_name %> </title>
+    <link rel='stylesheet' href='/stylesheets/recipe.css' />
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <section id="main-header">
+        <div id="header-container">
+            <div id="header-img-container">
+                <img src="<%= recipe.recipe_image %>">
+            </div>
+            <div id="main-header-text">
+                <h1> <%= recipe.recipe_name %> </h1>
+                <h4> <%= recipe.recipe_description %> </h4>
+            </div> 
+        </div> 
+    </section>
+    <section id="main-content">
+        <div id="ingredient-container">
+            <h1> Ingredients </h1>
+            <ul> 
+                <% ingredients.forEach((ingredient) => { %>
+                    <li class="ingredient-name">
+                         <%= ingredient.ingredient_name %> 
+                        <div class="ingredient-info"> <%= ingredient.ingredient_fact %> </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div id="vertical-line"></div>
+        <div id="recipe-container">
+            <h1> Recipe </h1>
+            <ol> 
+                <% steps.forEach((step) => { %>
+                    <li> <%= step.step_description %> </li>
+                <% }); %>
+            </ol>
+        </div>
+    </section>
+    <%- include('./partials/footer') %>
+</body>
+</html>

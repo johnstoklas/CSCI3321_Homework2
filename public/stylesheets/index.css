@@ -1,0 +1,141 @@
+body {
+  padding: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  background:
+    linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1)),
+    url('https://ucarecdn.com/b6be8ae7-1b12-4eb3-bdee-98c1fd77b5f2/-/format/auto/-/preview/3000x3000/-/quality/lighter/');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  overflow: hidden;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+#top-buttons {
+  display: flex;
+  flex-direction: right;
+  padding-top: 10px;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+#view-all-recipes-button { 
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header > h1 {
+  font-size: 60px;
+  margin-bottom: -5px;
+  margin-top: 100px;
+}
+
+#header > h5 {
+  margin: 0;
+  font-size: 20px;
+  margin-left: -160px;
+  font-style: italic;
+  width: fit-content;
+  justify-content: flex-start;
+}
+ 
+hr { 
+  width: 100px;
+  margin: 20px 0 15px 0;
+}
+
+#view-recipes-button {
+  background: linear-gradient(to top, hsl(0, 100%, 25%), hsl(0, 100%, 32%));
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  border-radius: 5px;
+}
+
+#view-recipes-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+#about-me-container {
+  color: white;
+  margin: 140px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+#about-me-container > * {
+  margin: 0;
+}
+
+#about-me-container > hr { 
+  margin: 10px;
+}
+
+#about-me-container > h4 {
+  font-size: 20px;
+}
+
+#about-me-container > p {
+  margin-left: 10px;
+}
+
+#partial-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: maroon;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#partial-header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#partial-header > p {
+  font-weight: bold;
+  margin-left: 30px;
+  width: 73%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#partial-header * {
+  text-decoration: none;
+  color: white;
+}
+
+#partial-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: black;
+  width: 100%;
+  margin-top: 40px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#partial-footer p {
+  margin: 0;
+}
+

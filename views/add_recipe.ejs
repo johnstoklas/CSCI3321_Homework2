@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/add_recipe.css' />
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+    <section id="form-container">
+        <h1> Add Recipe </h1> 
+        <form action="/add_recipe/submit" method="post" id="form">
+            <label for="recipe_name"> Recipe Name: </label>
+            <input type="input" name="recipe_name" id="recipe_name"><br>
+
+            <label for="recipe_image"> Recipe Image: </label>
+            <p class="helpful-info"> Enter an image link for your recipe. </p>
+            <input type="input" name="recipe_image" id="recipe_image"><br>
+
+            <label for="recipe_description"> Description: </label>
+            <textarea name="recipe_description" id="recipe_description" rows="4" cols="50"></textarea><br>
+
+            <label for="recipe_steps"> Recipe Steps: </label>
+            <p class="helpful-info"> Make sure to enter between each new step. </p>
+            <textarea name="recipe_steps" id="recipe_steps" rows="10" cols="50"></textarea><br>
+
+            <label for="ingredients[]"> Ingredients: </label>
+            <div id="checkbox-container">
+                <% ingredients.forEach((ingredient) => { %>
+                    <div class="ingredient-item">
+                        <input type="checkbox" name="ingredients[]" id="ingredient_<%= ingredient.ingredient_name %>" value="<%= ingredient.ingredient_id %>" class="ingredient-checks">
+                        <label for="ingredient_<%= ingredient.ingredient_name %>">
+                            <%= ingredient.ingredient_name %>
+                        </label>
+                    </div>
+                <% }) %>
+            </div>
+            
+
+            <label for="protein_type">Protein Type:</label>
+            <select name="protein_type" id="protein_type">
+                <option value="Beef">Beef</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Grains">Grains</option>
+            </select><br>
+        
+
+            <button type="submit" id="submit-button">Add Recipe</button>
+        </form>
+    </section>
+    <%- include('./partials/footer') %>
+  </body>
+  <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        const recipeName = document.getElementById('recipe_name').value;
+        const recipeImage = document.getElementById('recipe_image').value;
+        const recipeDescription = document.getElementById('recipe_description').value;
+        const recipeSteps = document.getElementById('recipe_steps').value;
+
+        const ingredientChecks = document.querySelectorAll('.ingredient-checks');
+        const isIngredientChecked = Array.from(ingredientChecks).some(checkbox => checkbox.checked);
+
+        if (!recipeName || !recipeImage || !recipeDescription || !recipeSteps || !isIngredientChecked) {
+            alert('Please fill out all fields!');
+            event.preventDefault();
+        }
+    });
+  </script>
+</html>

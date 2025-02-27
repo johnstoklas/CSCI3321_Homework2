@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/all_recipes.css' />
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+    <section id="main-recipes-container">
+        <h1 id="title"> All Recipes </h1>
+        <p id="title-info"> Click on a recipe to find out more about it! </p>    
+        <% categorizedRecipes.forEach((protein) => { %>
+            <div class="recipe-container">
+                <h3> <%= protein.type %> </h3>
+                <div class="recipe-list-container">
+                    <ul> 
+                        <% protein.recipes.forEach((recipe) => { %>
+                            <a href='/recipes/<%= recipe.recipe_id %>'>
+                                <li> <%= recipe.recipe_name %> </li>
+                            </a>
+                        <% }) %>
+                </div>
+            </div>
+        <% }) %>
+    </section>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
