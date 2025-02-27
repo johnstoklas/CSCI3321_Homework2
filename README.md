@@ -18,7 +18,7 @@ DATABASE_PASSWORD = (set this to your database password)
 DATABASE_NAME = (set this to your database name)
 ```
 
-4. Download the SQL script from Google Classroom in MySQL Workbench
+4. Download the SQL script from Google Classroom and run it in MySQL Workbench
 
 5. run ``` npm start ```
 
