@@ -3,10 +3,8 @@
 1. Clone this repository to your local machine using the following command:
 
  ```
- git clone https://github.com/your-username/repo-name.git
+ git clone https://github.com/johnstoklas/CSCI_Homework2.git
 ```
-
-Replace your-username and repo-name with your actual GitHub username and repository name.
 
 2. Run ```npm install ```
 
@@ -18,7 +16,7 @@ DATABASE_PASSWORD = (set this to your database password)
 DATABASE_NAME = (set this to your database name)
 ```
 
-4. Download the SQL script from Google Classroom and run it in MySQL Workbench
+4. Copy and paste the SQL script from the file titled SQL script in the repository and run it in MySQL Workbench.
 
 5. run ``` npm start ```
 
