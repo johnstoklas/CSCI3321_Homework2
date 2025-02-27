@@ -2,8 +2,9 @@
   
 1. Clone this repository to your local machine using the following command:
 
- ```bash
- git clone https://github.com/your-username/repo-name.git bash```
+ ```
+ git clone https://github.com/your-username/repo-name.git
+```
 
 Replace your-username and repo-name with your actual GitHub username and repository name.
 
